@@ -37,16 +37,10 @@ RUN gem install fastlane -v 2.119.0
 # Installing Bundle
 RUN gem install bundle
 
-# Install gradle
-#RUN wget https://services.gradle.org/distributions/gradle-4.6-bin.zip
-#RUN mkdir /opt/gradle
-#RUN unzip -d /opt/gradle gradle-4.6-bin.zip
-#RUN export PATH=$PATH:/opt/gradle/gradle-4.6/bin
 
 # Work directory
-#WORKDIR /app
 #Volume
-VOLUME ["/home/dtoro/Documentos/Fastlane/android_shop", "/etc/host"]
+VOLUME ["$HOME/Documentos/Fastlane/", "/etc/host"]
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /app
