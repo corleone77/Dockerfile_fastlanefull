@@ -1,4 +1,3 @@
-#FROM runmymind/docker-android-sdk:latest
 FROM phusion/baseimage:0.10.0
 # Installing build tools
 
